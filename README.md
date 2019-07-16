@@ -129,11 +129,11 @@ Many won't find `vim` or `vi` (that are used by default by git)
 friendly enough.
 
 Alternatives are:
-- [Notepad++](https://notepad-plus-plus.org/download/) (Windows only)
-- `nano` (Linux/MacOS only)
+- [GNU emacs](https://www.gnu.org/software/emacs/download.html)
 - [Sublime Text](https://www.sublimetext.com/3)
 - [Visual Studio Code](https://code.visualstudio.com/download)
-- [GNU emacs](https://www.gnu.org/software/emacs/download.html)
+- [Notepad++](https://notepad-plus-plus.org/download/) (Windows only)
+- `nano` (Linux/MacOS only)
 
 **NB**: Windows `Notepad.exe` is not a recommended option as
 it doesn't support Linux linefeed.
