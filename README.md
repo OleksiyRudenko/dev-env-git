@@ -130,6 +130,19 @@ git will ask for access credentials only once per each remote repos
 storage (e.g. GitHub), normally on first attempt to push your local
 repo to the remote.
 
+If under **Windows** you are getting prompted for credentials repeatedly
+or presented with an error message
+```
+fatal: HttpRequestException encountered.
+   An error occurred while sending the request.
+fatal: HttpRequestException encountered.
+   An error occurred while sending the request.
+Username for 'https://github.com':
+```
+try the following command: `git config --global credential.modalPrompt true`.
+Check official [docs](https://github.com/microsoft/Git-Credential-Manager-for-Windows)
+for the fixes for other possible issues you may face.
+
 ## Friendly git editor
 
 Many won't find `vim` or `vi` (that are used by default by git)
