@@ -141,7 +141,9 @@ Username for 'https://github.com':
 ```
 try the following command: `git config --global credential.modalPrompt true`.
 Check official [docs](https://github.com/microsoft/Git-Credential-Manager-for-Windows)
-for the fixes for other possible issues you may face.
+for the fixes for other possible issues you may face. Keep this project
+among your bookmarks just for the case you face the authentication issue
+at some later time.
 
 ## Friendly git editor
 
