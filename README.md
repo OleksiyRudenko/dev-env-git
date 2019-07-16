@@ -110,7 +110,9 @@ Credential manager helps to avoid authorization phase at
 every operation on remote repo with git.
 
 **Windows**:
-Install [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases)
+Install [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases).
+For downloads unfold and check **Assets** subsection below latest release 
+**Change Log**.
 
 **MacOS**: OSX keychain store is used by default, no need to install anything
 
@@ -122,6 +124,11 @@ If any command fails try googling the error message to fix the issue.
 
 Alternatively, for Linux you may try
 [Git Credential Manager from Microsoft](https://github.com/microsoft/Git-Credential-Manager-for-Mac-and-Linux/blob/master/Install.md#installing-on-linux-using-rpm-recommended).
+
+**Success criteria**: when Credential Manager is installed properly
+git will ask for access credentials only once per each remote repos
+storage (e.g. GitHub), normally on first attempt to push your local
+repo to the remote.
 
 ## Friendly git editor
 
