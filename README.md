@@ -362,7 +362,10 @@ out-of-the-box, others may require plugins.
 Check how your editor/IDE is [supported](https://editorconfig.org/#download).
 
 Copy `.editorconfig` with basic settings from this project to the root
-directory of your own projects. `cp ./.editorconfig ~/` will most likely do.
+directory of your own projects. 
+
+If your own projects are located somewhere under your home
+directory (the default case) `cp ./.editorconfig ~/` will do.
 
 Your editor/IDE may require to enable `.editorconfig` somewhere in its settings. 
 
