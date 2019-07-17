@@ -9,4 +9,6 @@ echo Check README.md for details.
 #
 #git config --global core.editor "'C:/Program Files (x86)/sublime text 3/subl.exe' -w"
 #
+#git config --global core.editor "nano"
+#
 git config --global -e
