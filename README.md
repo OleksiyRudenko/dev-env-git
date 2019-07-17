@@ -217,7 +217,8 @@ You might not have all lines relevant to your editor in
    - If editor shows commands in a toolbar then press a relevant hot-key
      (normally `^X` or `^Q`)
    - If editor offers GUI then option to quit is located under File menu
-   - You may find yourself in `vim` or `vi`. Press `ESC` and type `:q!` 
+   - You may find yourself in `vim` or `vi`. Press `ESC`, type `:q!` and
+     hit `Return` key 
 2. Uncomment relevant commands in `./git-editor-<platform>.sh` 
    by removing leading `# `. 
 3. Launch `./git-editor-<platform>.sh`
