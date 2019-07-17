@@ -1,3 +1,5 @@
+![Entry level: beginner](https://img.shields.io/badge/Entry%20level-beginner-brightgreen.svg)
+
 # Development Environment Helpers: git
 
 This repo contains opinionated recommendations and suggestions
@@ -102,7 +104,6 @@ command in terminal to catch up:
 ```
 cd ~/dev-env-git
 ```
-
 
 ### Credentials manager
 
