@@ -348,7 +348,7 @@ Find and check the relevant setting. Examples:
   - IntelliJ IDEA products: File &gt; Settings (or _ProductName_ &gt; Preferences) 
     &gt; Editor &gt; General -- Ensure line feed at file end on Save
   - [VS Code](https://stackoverflow.com/questions/44704968/visual-studio-code-insert-new-line-at-the-end-of-files)
-  - Sublime: Command Palette &gt; Preferences -- change or add `"ensure_newline_at_eof_on_save": false`
+  - Sublime: Command Palette &gt; Preferences -- change or add `"ensure_newline_at_eof_on_save": true`
 
 > This ensures that adding code/text at the end of file will not mark 
 the fragment that actually had not been effectively changed 
