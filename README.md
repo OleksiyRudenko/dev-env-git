@@ -59,6 +59,10 @@ Remember to precede script with explicit path, e.g. `./script.sh`
 Get registered with [github.com](https://github.com/).
 
 Install [git](https://git-scm.com/downloads).
+If under Windows you are prompted to choose an editor
+it is recommended that you opt for `Notepad++` (a GUI enabled
+editor) or `Nano` (non-GUI, yet friendlier to beginners than
+`vim`).
 
 Open Terminal (Git Bash under Windows). The most of the instructions
 below are to be completed in Terminal.
@@ -160,6 +164,10 @@ Alternatives are:
 
 **NB**: Windows `Notepad.exe` is not a recommended option as
 it doesn't support Linux linefeed.
+
+**Windows**: if you're opted for `Notepad++` or `Nano` when
+when installed git and you're happy with your choice, 
+you may skip this section completely. 
 
 You may opt for a different editor of your choice. There is a couple of basic
 requirements it should meet:
