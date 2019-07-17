@@ -204,7 +204,7 @@ If the editor of your choice opens and you see something like
 [credential]
 	helper = wincred
 ``` 
-then you have succeeded.
+then you have succeeded. Just close the editor.
 
 ### What might go wrong?
 
