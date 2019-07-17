@@ -192,6 +192,51 @@ may help you to find proper path.
 
 Then launch the script with `./git-editor-<platform>.sh`.
 
+If the editor of your choice opens and you see something like
+```
+[user]
+	name = John Doe
+	email = john.doe@example.com
+	username = JohnDoe
+[core]
+	editor = 'D:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin ''
+	pager = cat
+[credential]
+	helper = wincred
+``` 
+then you have succeeded.
+
+### What might go wrong?
+
+**You can see the file above but the editor is not the one you expected.**
+
+You might not have all lines relevant to your editor in 
+`./git-editor-<platform>.sh` uncommented. So, the default editor didn't change.
+
+1. Quit the editor.
+   - If editor shows commands in a toolbar then press a relevant hot-key
+     (normally `^X` or `^Q`)
+   - If editor offers GUI then option to quit is located under File menu
+   - You may find yourself in `vim` or `vi`. Press `ESC` and type `:q!` 
+2. Uncomment relevant commands in `./git-editor-<platform>.sh` 
+   by removing leading `# `. 
+3. Launch `./git-editor-<platform>.sh`
+
+**Editor didn't start. Some error reported**
+ 
+The path to the editor in `./git-editor-<platform>.sh` is not correct.
+
+1. Fix path to your editor in `./git-editor-<platform>.sh`.
+   Try finding proper path to your editor. Optionally consult google
+   for a proper path to the editor of your choice as described in 
+   this section above.
+2. Launch `./git-editor-<platform>.sh`
+
+**If you do not succeed either** then try setting different editor.
+Do not forget to comment back failing commands in `./git-editor-<platform>.sh`
+before uncommenting commands for a different editor. Or yell for help
+in your student community. 
+
 ## Git Helpers
 
 ### CLI Enhancements

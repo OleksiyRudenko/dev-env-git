@@ -14,3 +14,5 @@ echo Commands 'command -v <executable_name>' and 'which <executable_name>' may h
 #git config --global core.editor "/usr/local/bin/code --wait"
 #
 #git config --global core.editor "/snap/bin/subl -n -w"
+#
+git config --global -e
