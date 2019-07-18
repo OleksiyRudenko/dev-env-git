@@ -18,6 +18,7 @@ recommendations useful.
 - [Basic setup](#basic-setup)
   - [Credentials manager](#credentials-manager)
 - [Friendly git editor](#friendly-git-editor)
+  - [What might go wrong?](#what-might-go-wrong)
 - [Git Helpers](#git-helpers)
   - [CLI Enhancements](#cli-enhancements)
   - [Git Aliases](#git-aliases)
@@ -30,6 +31,7 @@ recommendations useful.
 - [IDE minimal tweak](#ide-minimal-tweak)
   - [`.editorconfig`](#editorconfig)
 - [Issues?](#issues)
+- [Contributors](#contributors)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
@@ -385,3 +387,11 @@ Your editor/IDE may require to enable `.editorconfig` somewhere in its settings.
 If anything above contains errors, not quite clear or requires
 improvement or update, please, feel free adding an
 [Issue](https://github.com/OleksiyRudenko/dev-env-git/issues).
+
+## Contributors
+
+There are people that contributed to this project by testing instructions
+herein and providing their feedback. Support and willingness to help
+is much appreciated.
+
+- [sayckl](https://github.com/sayckl)
