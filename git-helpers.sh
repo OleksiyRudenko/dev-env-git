@@ -10,6 +10,7 @@ git config --global color.ui true
 git config --global core.excludesfile ~/.gitignore
 # aliases
 git config --global alias.logg "log --graph --full-history --all --color --pretty=tformat:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s\""
+git config --global alias.logg-lost "logg --reflog"
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
