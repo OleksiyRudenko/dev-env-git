@@ -1,3 +1,5 @@
+![Entry level: beginner](https://img.shields.io/badge/Entry%20level-beginner-brightgreen.svg)
+
 # Development Environment Helpers: git
 
 This repo contains opinionated recommendations and suggestions
@@ -16,6 +18,7 @@ recommendations useful.
 - [Basic setup](#basic-setup)
   - [Credentials manager](#credentials-manager)
 - [Friendly git editor](#friendly-git-editor)
+  - [What might go wrong?](#what-might-go-wrong)
 - [Git Helpers](#git-helpers)
   - [CLI Enhancements](#cli-enhancements)
   - [Git Aliases](#git-aliases)
@@ -28,6 +31,7 @@ recommendations useful.
 - [IDE minimal tweak](#ide-minimal-tweak)
   - [`.editorconfig`](#editorconfig)
 - [Issues?](#issues)
+- [Contributors](#contributors)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <!-- generated with [DocToc](https://github.com/thlorenz/doctoc) -->
@@ -57,6 +61,13 @@ Remember to precede script with explicit path, e.g. `./script.sh`
 Get registered with [github.com](https://github.com/).
 
 Install [git](https://git-scm.com/downloads).
+
+**Notes for Windows users**
+> When prompted to choose an editor
+> it is recommended that you opt for `Notepad++` (a GUI enabled
+> editor) or `Nano` (non-GUI, yet friendlier to beginners than
+> `vim`).
+> When prompted for extra options enable file system caching.
 
 Open Terminal (Git Bash under Windows). The most of the instructions
 below are to be completed in Terminal.
@@ -103,14 +114,15 @@ command in terminal to catch up:
 cd ~/dev-env-git
 ```
 
-
 ### Credentials manager
 
 Credential manager helps to avoid authorization phase at
 every operation on remote repo with git.
 
 **Windows**:
-Install [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases)
+Install [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases).
+For downloads unfold and check **Assets** subsection below latest release 
+**Change Log**.
 
 **MacOS**: OSX keychain store is used by default, no need to install anything
 
@@ -123,20 +135,44 @@ If any command fails try googling the error message to fix the issue.
 Alternatively, for Linux you may try
 [Git Credential Manager from Microsoft](https://github.com/microsoft/Git-Credential-Manager-for-Mac-and-Linux/blob/master/Install.md#installing-on-linux-using-rpm-recommended).
 
+**Success criteria**: when Credential Manager is installed properly
+git will ask for access credentials only once per each remote repos
+storage (e.g. GitHub), normally on first attempt to push your local
+repo to the remote.
+
+If under **Windows** you are getting prompted for credentials repeatedly
+or presented with an error message
+```
+fatal: HttpRequestException encountered.
+   An error occurred while sending the request.
+fatal: HttpRequestException encountered.
+   An error occurred while sending the request.
+Username for 'https://github.com':
+```
+try the following command: `git config --global credential.modalPrompt true`.
+Check official [docs](https://github.com/microsoft/Git-Credential-Manager-for-Windows)
+for the fixes for other possible issues you may face. Keep this project
+among your bookmarks just for the case you face the authentication issue
+at some later time.
+
 ## Friendly git editor
 
 Many won't find `vim` or `vi` (that are used by default by git)
 friendly enough.
 
 Alternatives are:
-- [Notepad++](https://notepad-plus-plus.org/download/) (Windows only)
-- `nano` (Linux/MacOS only)
+- [GNU emacs](https://www.gnu.org/software/emacs/download.html)
 - [Sublime Text](https://www.sublimetext.com/3)
 - [Visual Studio Code](https://code.visualstudio.com/download)
-- [GNU emacs](https://www.gnu.org/software/emacs/download.html)
+- [Notepad++](https://notepad-plus-plus.org/download/) (Windows only)
+- `nano` (Linux/MacOS only)
 
 **NB**: Windows `Notepad.exe` is not a recommended option as
 it doesn't support Linux linefeed.
+
+**Windows**: if you're opted for `Notepad++` or `Nano` when
+when installed git and you're happy with your choice, 
+you may skip this section completely. 
 
 You may opt for a different editor of your choice. There is a couple of basic
 requirements it should meet:
@@ -169,6 +205,52 @@ Linux CLI commands `command -v <executable_name>` and `which <executable_name>`
 may help you to find proper path.
 
 Then launch the script with `./git-editor-<platform>.sh`.
+
+If the editor of your choice opens and you see something like
+```
+[user]
+	name = John Doe
+	email = john.doe@example.com
+	username = JohnDoe
+[core]
+	editor = 'D:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin ''
+	pager = cat
+[credential]
+	helper = wincred
+``` 
+then you have succeeded. Just close the editor.
+
+### What might go wrong?
+
+**You can see the file above but the editor is not the one you expected.**
+
+You might not have all lines relevant to your editor in 
+`./git-editor-<platform>.sh` uncommented. So, the default editor didn't change.
+
+1. Quit the editor.
+   - If editor shows commands in a toolbar then press a relevant hot-key
+     (normally `^X` or `^Q`)
+   - If editor offers GUI then option to quit is located under File menu
+   - You may find yourself in `vim` or `vi`. Press `ESC`, type `:q!` and
+     hit `Return` key 
+2. Uncomment relevant commands in `./git-editor-<platform>.sh` 
+   by removing leading `# `. 
+3. Launch `./git-editor-<platform>.sh`
+
+**Editor didn't start. Some error reported**
+ 
+The path to the editor in `./git-editor-<platform>.sh` is not correct.
+
+1. Fix path to your editor in `./git-editor-<platform>.sh`.
+   Try finding proper path to your editor. Optionally consult google
+   for a proper path to the editor of your choice as described in 
+   this section above.
+2. Launch `./git-editor-<platform>.sh`
+
+**If you do not succeed either** then try setting different editor.
+Do not forget to comment back failing commands in `./git-editor-<platform>.sh`
+before uncommenting commands for a different editor. Or yell for help
+in your student community. 
 
 ## Git Helpers
 
@@ -279,7 +361,7 @@ Find and check the relevant setting. Examples:
   - IntelliJ IDEA products: File &gt; Settings (or _ProductName_ &gt; Preferences) 
     &gt; Editor &gt; General -- Ensure line feed at file end on Save
   - [VS Code](https://stackoverflow.com/questions/44704968/visual-studio-code-insert-new-line-at-the-end-of-files)
-  - Sublime: Command Palette &gt; Preferences -- change or add `"ensure_newline_at_eof_on_save": false`
+  - Sublime: Command Palette &gt; Preferences -- change or add `"ensure_newline_at_eof_on_save": true`
 
 > This ensures that adding code/text at the end of file will not mark 
 the fragment that actually had not been effectively changed 
@@ -293,7 +375,10 @@ out-of-the-box, others may require plugins.
 Check how your editor/IDE is [supported](https://editorconfig.org/#download).
 
 Copy `.editorconfig` with basic settings from this project to the root
-directory of your own projects. `cp ./.editorconfig ~/` will most likely do.
+directory of your own projects. 
+
+If your own projects are located somewhere under your home
+directory (the default case) `cp ./.editorconfig ~/` will do.
 
 Your editor/IDE may require to enable `.editorconfig` somewhere in its settings. 
 
@@ -302,3 +387,11 @@ Your editor/IDE may require to enable `.editorconfig` somewhere in its settings.
 If anything above contains errors, not quite clear or requires
 improvement or update, please, feel free adding an
 [Issue](https://github.com/OleksiyRudenko/dev-env-git/issues).
+
+## Contributors
+
+There are people that contributed to this project by testing instructions
+herein and providing their feedback. Support and willingness to help
+is much appreciated.
+
+- [sayckl](https://github.com/sayckl)

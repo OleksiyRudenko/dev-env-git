@@ -14,3 +14,5 @@ echo nano, pico and emacs come pre-bundled with MacOS
 #git config --global core.editor "'/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' --wait"
 #
 #git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w"
+#
+git config --global -e
