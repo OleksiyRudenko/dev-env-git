@@ -201,8 +201,9 @@ Some editors come pre-bundled with OS, so try launching the editor of
 your choice from Terminal to know if you need installing it first.
 
 Open corresponding `git-editor-<platform>.sh` to edit.
+`<platform>` is your OS: `linux`, `macos`, or `windows`.
 
-Uncomment section that corresponds to your editor of choice and edit
+Uncomment (remove leading `# `) section that corresponds to your editor of choice and edit
 the path to the editor executable as the pre-defined may not match actual
 installation path.
 
