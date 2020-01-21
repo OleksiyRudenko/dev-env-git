@@ -83,6 +83,8 @@ Bash will get opened in context of your project.
 ![git bash context menu](./media/git-bash-context-menu.png)
 </details>
 
+**All OS**
+
 Execute following commands to have your git identity configured.
 Replace **"John Doe"** with your real name (obey quotes)
 and **johndoe@example.com** with the email you used to register
