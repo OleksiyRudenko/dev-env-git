@@ -124,7 +124,10 @@ Install [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Cr
 For downloads unfold and check **Assets** subsection below latest release 
 **Change Log**.
 
-**MacOS**: OSX keychain store is used by default, no need to install anything
+**MacOS**: OSX keychain store is used by default, no need to install anything.
+Just tell Git to use the KeyChain to store your credentials:
+
+`git config --global credential.helper osxkeychain`
 
 **Linux Mint/Ubuntu**
 
