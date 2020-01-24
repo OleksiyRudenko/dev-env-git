@@ -14,6 +14,8 @@ git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.unstage 'reset HEAD --'
+git config --global alias.puff "pull --ff-only"
+git config --global alias.purr "pull --rebase"
 # next prunes local branches, collects garbage
 git config --global alias.gc-all "!git remote prune origin && git reflog expire --expire=all refs/heads/master && git fsck –unreachable && git gc"
 # next lists branches you worked on (most recent goes first)
