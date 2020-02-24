@@ -9,10 +9,12 @@ DS_Store?
 ## Building
 node_modules/
 dist/
+build/
 .cache
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+
+# Logs
+logs
+*.log*
 
 ## Other
 Desktop.ini
