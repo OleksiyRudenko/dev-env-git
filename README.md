@@ -38,7 +38,7 @@ recommendations useful.
 
 ## Intro
 
-This repo contains scripts that make git users'
+[This repo](https://github.com/OleksiyRudenko/dev-env-git) contains scripts that make git users'
 and project maintainers' life easier.
 
 All scripts are optional. It is recommended that you look
