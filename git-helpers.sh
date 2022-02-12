@@ -1,5 +1,6 @@
 # git config --global user.name OleksiyRudenko
 # git config --global user.email fake-address@gmail.com
+cp ~/.gitignore ~/.gitignore.backup 2>/dev/null
 cp ./.gitignore ~/
 git config --global format.commitMessageColumns 72
 git config --global core.pager cat
