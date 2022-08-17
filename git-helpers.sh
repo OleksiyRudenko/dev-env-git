@@ -19,7 +19,7 @@ git config --global alias.unstage 'reset HEAD --'
 git config --global alias.tags "tag --format='%(tag) %(subject)'"
 git config --global alias.taga 'tag -m'
 git config --global alias.tagv '!git taga "$1" "$1" && git push-tags #'
-git config --global alias.delete-tag '!git tag -d "$1" && git push --delete origin "$1" #'
+git config --global alias.tag-delete '!git tag -d "$1" && git push --delete origin "$1" #'
 git config --global alias.push-tags "push --tags"
 git config --global alias.puff "pull --ff-only"
 git config --global alias.purr "pull --rebase"
