@@ -5,6 +5,7 @@ cp ./.gitignore ~/
 git config --global format.commitMessageColumns 72
 git config --global core.pager cat
 # git config --global push.default upstream
+git config --global --add --bool push.autoSetupRemote true
 git config --global merge.conflictstyle diff3
 git config --global color.ui true
 git config --global core.excludesfile ~/.gitignore
