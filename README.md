@@ -349,17 +349,30 @@ on some of your repos to see what those do.
 #### Basic flow
 
 Executing `./git-flow-basic.sh` will add aliases to support some
-basic git flow:
+basic git flow.
+
+* `sync-main-upstream` - updates local `main` and `origin/main`
+  with `upstream/main`
+* `sync-branch-upstream-merge-main`
+    - calls `sync-main-upstream`
+    - updates feature branch from `main` using simple merge strategy
+* `sync-main` - updates local `main` from `origin/main`
+  when on a feature branch
+* `sync-branch-rebase-main` - rebases current branch onto
+  `main`; conflicts may arise
+* `sync-branch-continue` - completes rebasing after conflict resolution
+
+Use the following aliases if repo's main branch is named `master`.
  * `sync-master-upstream` - updates local `master` and `origin/master`
    with `upstream/master`
- * `sync-branch-upstream-merge`
+ * `sync-branch-upstream-merge-master`
    - calls `sync-master-upstream`
    - updates feature branch from `master` using simple merge strategy
  * `sync-master` - updates local `master` from `origin/master`
    when on a feature branch
- * `sync-branch-rebase` - rebases current branch onto (updated)
+ * `sync-branch-rebase-master` - rebases current branch onto (updated)
    `master`; conflicts may arise
- * `sync-branch-continue` - completes reabasing after conflict resolution
+ * `sync-branch-continue` - completes rebasing after conflict resolution
 
 Add and use those when you clearly understand what is behind. This
 is also a rather source of inspiration to build your own git flow
