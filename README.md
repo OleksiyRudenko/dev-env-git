@@ -73,12 +73,12 @@ Open Terminal (Git Bash under Windows). The most of the instructions
 below are to be completed in Terminal.
 
 <details><summary>A note for Windows users (click to expand)</summary>
-Did you you can open git bash from File Explorer?
+Did you know you can open git bash from File Explorer?
 Locate your project (or just e.g. any directory in your file system)
-in File Explorer, right click within explorer window 
+in File Explorer, right click within explorer window
 to open context menu and select "Git Bash Here" option.
 
-Bash will get opened in context of your project. 
+Bash will get opened in context of your project.
 
 ![git bash context menu](./media/git-bash-context-menu.png)
 </details>
@@ -87,11 +87,12 @@ Bash will get opened in context of your project.
 
 Execute following commands to have your git identity configured.
 Replace **"John Doe"** with your real name (obey quotes)
-and **johndoe@example.com** with the email you used to register
-on GitHub.
+and **999999+johndoe@users.noreply.github.com** with the email GitHub suggests
+in your settings https://github.com/settings/emails to protect
+your real email address from parsing.
 ```
 git config --global user.name "John Doe"
-git config --global user.email johndoe@example.com
+git config --global user.email 999999+johndoe@users.noreply.github.com
 ```
 
 _Note!_ Copy-paste + edit are your best friends at the most of times.
@@ -123,7 +124,7 @@ every operation on remote repo with git.
 
 **Windows**:
 Install [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases).
-For downloads unfold and check **Assets** subsection below latest release 
+For downloads unfold and check **Assets** subsection below latest release
 **Change Log**.
 
 **MacOS**: OSX keychain store is used by default, no need to install anything.
@@ -176,8 +177,8 @@ Alternatives are:
 it doesn't support Linux linefeed.
 
 **Windows**: if you're opted for `Notepad++` or `Nano` when
-when installed git and you're happy with your choice, 
-you may skip this section completely. 
+when installed git and you're happy with your choice,
+you may skip this section completely.
 
 You may opt for a different editor of your choice. There is a couple of basic
 requirements it should meet:
@@ -191,7 +192,7 @@ favourite editor with git.
 Install an editor of your choice (`git-editor-linux.sh` contains
 instructions to install `nano` or `emacs`).
 
-**Emacs under Windows**: unpack 
+**Emacs under Windows**: unpack
 [distribution archive](http://ftp.gnu.org/gnu/emacs/windows/emacs-26/emacs-26.1-x86_64.zip)
 into `C:/Program Files/emacs`
 
@@ -223,14 +224,14 @@ If the editor of your choice opens and you see something like
 	pager = cat
 [credential]
 	helper = wincred
-``` 
+```
 then you have succeeded. Just close the editor.
 
 ### What might go wrong?
 
 **You can see the file above but the editor is not the one you expected.**
 
-You might not have all lines relevant to your editor in 
+You might not have all lines relevant to your editor in
 `./git-editor-<platform>.sh` uncommented. So, the default editor didn't change.
 
 1. Quit the editor.
@@ -238,32 +239,32 @@ You might not have all lines relevant to your editor in
      (normally `^X` or `^Q`)
    - If editor offers GUI then option to quit is located under File menu
    - You may find yourself in `vim` or `vi`. Press `ESC`, type `:q!` and
-     hit `Return` key 
-2. Uncomment relevant commands in `./git-editor-<platform>.sh` 
-   by removing leading `# `. 
+     hit `Return` key
+2. Uncomment relevant commands in `./git-editor-<platform>.sh`
+   by removing leading `# `.
 3. Launch `./git-editor-<platform>.sh`
 
 **Editor didn't start. Some error reported**
- 
+
 The path to the editor in `./git-editor-<platform>.sh` is not correct.
 
 1. Fix path to your editor in `./git-editor-<platform>.sh`.
    Try finding proper path to your editor. Optionally consult google
-   for a proper path to the editor of your choice as described in 
+   for a proper path to the editor of your choice as described in
    this section above.
 2. Launch `./git-editor-<platform>.sh`
 
 **If you do not succeed either** then try setting different editor.
 Do not forget to comment back failing commands in `./git-editor-<platform>.sh`
 before uncommenting commands for a different editor. Or yell for help
-in your student community. 
+in your student community.
 
 ## Git Helpers
 
 ### CLI Enhancements
 
 Make your terminal shell prompt informative.
-Executing `./cli-tune.sh` will copy `.bash_profile`, 
+Executing `./cli-tune.sh` will copy `.bash_profile`,
 `git-completion.bash` and `git-prompt.sh` to your $HOME.
 
 The above improves CLI by e.g. adding info about current git branch
@@ -288,8 +289,8 @@ Learn more about
 
 Executing `./git-helpers.sh` will:
  * add global `.gitignore` to ignore most common file patterns
- * add a collection of aliases/shorthands  
- 
+ * add a collection of aliases/shorthands
+
  * Study `git-helper.sh`, try commands assigned to aliases
    on some of your repos to see what those do.
    Some of aliases:
@@ -297,7 +298,7 @@ Executing `./git-helpers.sh` will:
 **More on global `.gitignore`**:
 Global `.gitignore` decreases a risk of tracking of the most
 common files to be ignored (IDE settings, temporary files,
-directories for app builds etc). Global `.gitignore` works 
+directories for app builds etc). Global `.gitignore` works
 even when the project doesn't contain its own `.gitignore`.
 You may add more rules or remove some by editing `~/.gitignore`.
 
@@ -348,9 +349,9 @@ works when git town is installed.
 ## Advanced
 
 ### Subrepo
- 
+
 [git-subrepo](https://github.com/ingydotnet/git-subrepo) is a great replacement
-for `git-submodule` and `git-subtree`. 
+for `git-submodule` and `git-subtree`.
 Please, refer to:
  * [project docs](https://github.com/ingydotnet/git-subrepo/wiki)
    for more details
@@ -361,16 +362,16 @@ Please, refer to:
 
 ## IDE minimal tweak
 
-Tune your editor/IDE so it ensures empty line at the end of file. 
+Tune your editor/IDE so it ensures empty line at the end of file.
 
 Find and check the relevant setting. Examples:
-  - IntelliJ IDEA products: File &gt; Settings (or _ProductName_ &gt; Preferences) 
+  - IntelliJ IDEA products: File &gt; Settings (or _ProductName_ &gt; Preferences)
     &gt; Editor &gt; General -- Ensure line feed at file end on Save
   - [VS Code](https://stackoverflow.com/questions/44704968/visual-studio-code-insert-new-line-at-the-end-of-files)
   - Sublime: Command Palette &gt; Preferences -- change or add `"ensure_newline_at_eof_on_save": true`
 
-> This ensures that adding code/text at the end of file will not mark 
-the fragment that actually had not been effectively changed 
+> This ensures that adding code/text at the end of file will not mark
+the fragment that actually had not been effectively changed
 (which takes place when a line doesn't end with LF character).
 This makes history of changes cleaner and diffs reflecting actual changes.
 
@@ -381,12 +382,12 @@ out-of-the-box, others may require plugins.
 Check how your editor/IDE is [supported](https://editorconfig.org/#download).
 
 Copy `.editorconfig` with basic settings from this project to the root
-directory of your own projects. 
+directory of your own projects.
 
 If your own projects are located somewhere under your home
 directory (the default case) `cp ./.editorconfig ~/` will do.
 
-Your editor/IDE may require to enable `.editorconfig` somewhere in its settings. 
+Your editor/IDE may require to enable `.editorconfig` somewhere in its settings.
 
 ## Issues?
 
