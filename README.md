@@ -95,9 +95,9 @@ git config --global user.name "John Doe"
 git config --global user.email 999999+johndoe@users.noreply.github.com
 ```
 
-_Note!_ Copy-paste + edit are your best friends at the most of times.
+_Note!_ Copy-paste + edit are your best friends most of the time.
 
-Navigate to the location you gonna have your development projects in.
+Navigate to the location you are going to have your development projects in.
 Your home directory is a good point to start at.
 You can get to your home directory by executing `cd ~/` command in Terminal.
 
@@ -116,6 +116,43 @@ command in terminal to catch up:
 ```
 cd ~/dev-env-git
 ```
+
+<details><summary>A recommendation on projects organization</summary>
+Consider using the projects directory structure that reflects
+your accounts on potentially multiple repo hosting platforms, both
+your personal and under various organizations you may be a part to.
+
+```bash
+/dev
+ |-- kottans.gh  # projects that are hosted under Kottans org on GitHub
+ |-- or.gh       # projects that are hosted under Oleksiy Rudenko's acc on GitHub
+ \-- or.gl       # projects that are hosted under Oleksiy Rudenko's acc on GitLab
+```
+
+This way you will also be able to fine tune git per directory tree.
+(Paths below are in Windows notation).
+
+```editorconfig
+# ~/.gitconfig
+[user]
+    name = "John Doe"
+
+[includeIf "gitdir:C:/dev/or.gh/**"]
+    path = ~/.gitconfig.dev.or.gh.gitconfig
+
+[includeIf "gitdir:C:/dev/or.gl/**"]
+    path = ~/.gitconfig.dev.or.gl.gitconfig
+
+# ~/.gitconfig.dev.or.gh.gitconfig
+[user]
+    email = 999999+johndoe@users.noreply.github.com"
+
+# ~/.gitconfig.dev.or.gl.gitconfig
+[user]
+    email = johndoe@noreply.gitlab.com"
+```
+
+</details>
 
 ### Credentials manager
 
@@ -209,7 +246,7 @@ the path to the editor executable as the pre-defined may not match actual
 installation path.
 
 Linux CLI commands `command -v <executable_name>` and `which <executable_name>`
-may help you to find proper path.
+may help you find proper path.
 
 Then launch the script with `./git-editor-<platform>.sh`.
 
