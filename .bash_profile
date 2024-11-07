@@ -1,3 +1,5 @@
+# Ensure .bashrc is loaded via .profile when shell is opened in login context
+source "$HOME/.profile"
 # Enable tab completion
 source ~/git-completion.bash
 
