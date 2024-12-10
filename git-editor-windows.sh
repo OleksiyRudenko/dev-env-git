@@ -10,11 +10,11 @@ echo Check README.md for details.
 #
 #git config --global core.editor "'C:/Program Files (x86)/sublime text 3/subl.exe' -w"
 #
-# === Linux/MacOS
+# === Windows gitbash (if nano is installed along with git)
 #git config --global core.editor "nano"
 #
 # === WSL (Windows Subsystem Linux). Requires Windows version of VS Code installed. Replace USERNAME as appropriate.
-#echo "alias vscode='/mnt/c/Users/USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'" >> $HOME/.bash_profile
-#git config --global core.editr "vscode --wait"
+#echo "alias vscode='/mnt/c/Users/USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'" >> $HOME/.bashrc
+#git config --global core.editor "vscode --wait"
 #
 git config --global -e
